@@ -18,17 +18,17 @@ export const FEATURES: Record<string, FeatureConfig> = {
     description: '保存无限数量的文章',
     plans: ['free', 'pro'],
     limits: {
-      free: 5, // 免费版最多5篇
+      free: -1, // 免费版无限
       pro: -1, // 专业版无限
     }
   },
 
   // 平台支持
   'multi-platform': {
-    id: 'multi-platform', 
+    id: 'multi-platform',
     name: '多平台发布',
     description: '支持知乎、掘金、知识星球平台',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   'wechat-platform': {
@@ -42,21 +42,21 @@ export const FEATURES: Record<string, FeatureConfig> = {
     id: 'zhihu-platform',
     name: '知乎平台',
     description: '发布到知乎专栏',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   'juejin-platform': {
     id: 'juejin-platform',
-    name: '掘金平台', 
+    name: '掘金平台',
     description: '发布到掘金社区',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   'zsxq-platform': {
     id: 'zsxq-platform',
     name: '知识星球',
     description: '发布到知识星球',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   // 视频平台支持
@@ -64,28 +64,28 @@ export const FEATURES: Record<string, FeatureConfig> = {
     id: 'video_wechat-platform',
     name: '微信视频号',
     description: '发布到微信视频号',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   'douyin-platform': {
     id: 'douyin-platform',
     name: '抖音平台',
     description: '发布到抖音短视频',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   'bilibili-platform': {
     id: 'bilibili-platform',
     name:'B站平台',
     description: '发布到B站视频',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   'xiaohongshu-platform': {
     id: 'xiaohongshu-platform',
     name: '小红书平台',
     description: '发布到小红书视频',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   // 样式功能
@@ -93,7 +93,7 @@ export const FEATURES: Record<string, FeatureConfig> = {
     id: 'advanced-styles',
     name: '专业样式',
     description: '使用技术风格和简约风格模板',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   // 预设功能
@@ -101,7 +101,7 @@ export const FEATURES: Record<string, FeatureConfig> = {
     id: 'publish-presets',
     name: '发布预设',
     description: '创建和管理发布模板',
-    plans: ['pro']
+    plans: ['free', 'pro']
   },
 
   // 图片功能
@@ -111,7 +111,7 @@ export const FEATURES: Record<string, FeatureConfig> = {
     description: '图片云端存储和管理',
     plans: ['free', 'pro'],
     limits: {
-      free: 20, // 免费版20张/月
+      free: 500, // 免费版500张/月
       pro: 500, // 专业版500张/月
     }
   },
@@ -121,7 +121,7 @@ export const FEATURES: Record<string, FeatureConfig> = {
     id: 'custom-r2',
     name: '自定义R2存储',
     description: '使用您自己的Cloudflare R2存储，无限制上传图片',
-    plans: ['pro']
+    plans: ['free', 'pro']
   }
 };
 
